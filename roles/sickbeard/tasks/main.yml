@@ -9,7 +9,7 @@
 
 # Download source
 - name: Clone sickbeard
-  command: git clone {{ repo }} {{ source_location }} creates={{ source_location }}
+  git: repo={{ repo }} dest={{ source_location }}
 
 # Setup env
 - name: Ensure user group for the applications exists
